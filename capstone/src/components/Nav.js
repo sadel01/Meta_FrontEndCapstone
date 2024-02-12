@@ -1,15 +1,16 @@
 import React from "react";
+import '../App.css';
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="navStyle">
         <ul>
-            <li> <a href="">Home</a></li>
-            <li> <a href="">About</a></li>
-            <li> <a href="">Menu</a></li>
-            <li> <a href="">Reservations</a></li>
-            <li> <a href="">Order Online</a></li>
-            <li> <a href="">Login</a></li>
+            <li> <a href="">HOME</a></li>
+            <li> <a href="">ABOUT</a></li>
+            <li> <a href="">MENU</a></li>
+            <li> <a href="">RESERVATIONS</a></li>
+            <li> <a href="">ORDER ONLINE</a></li>
+            <li> <a href="">LOGIN</a></li>
         </ul>
     </nav>
   );

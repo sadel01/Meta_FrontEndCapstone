@@ -3,8 +3,8 @@ import { ReactComponent as Logo } from '../logo.svg';
 
 const Header = () => {
   return (
-    <header>
-        <Logo />
+    <header className="headerStyle">
+        <Logo className="logo"/>
     </header>
   );
 };
