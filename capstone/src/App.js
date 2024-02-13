@@ -14,9 +14,7 @@ function App() {
         <Header/>
         <Nav/>
       </div>
-      <Routes>
-        <Route path="/" element={<Main />} />
-      </Routes>
+      <Main/>
       <Footer/>
     </Router>
   );
