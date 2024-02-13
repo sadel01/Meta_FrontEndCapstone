@@ -1,17 +1,39 @@
 import { initializeTimes, updateTimes } from './components/Main';
+import { fetchAPI } from './API';
 
-describe('initializeTimes function', () => {
-  test('should return the correct initial times', () => {
-    const initialTimes = initializeTimes();
-    expect(initialTimes).toEqual(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
+jest.mock('./API', () => ({
+  fetchAPI: jest.fn(),
+}));
+
+describe('Main component functions', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
-});
 
-describe('updateTimes function', () => {
-  test('should return the same state', () => {
-    const state = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    const selectedDate = new Date();
-    const newState = updateTimes(state, selectedDate);
-    expect(newState).toEqual(state);
+  it('should initialize times', async () => {
+    const dispatch = jest.fn();
+    const mockTimes = ['10:00', '11:00', '12:00'];
+    fetchAPI.mockResolvedValueOnce(mockTimes);
+
+    await initializeTimes(dispatch);
+
+    expect(dispatch).toHaveBeenCalledWith({
+      type: 'SET_TIMES',
+      payload: mockTimes,
+    });
+  });
+
+  it('should update times', async () => {
+    const dispatch = jest.fn();
+    const mockTimes = ['10:00', '11:00', '12:00'];
+    const selectedDate = '2024-02-16';
+    fetchAPI.mockResolvedValueOnce(mockTimes);
+
+    await updateTimes(selectedDate, dispatch);
+
+    expect(dispatch).toHaveBeenCalledWith({
+      type: 'SET_TIMES',
+      payload: mockTimes,
+    });
   });
 });

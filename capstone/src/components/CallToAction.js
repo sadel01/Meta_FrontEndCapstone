@@ -8,7 +8,7 @@ const CallToAction = () => {
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <button>Reserve a table</button>
+                    <a href='/booking'><button>Reserve a table</button></a>
                 </div>
                 <div className="heroImage">
                     <img src={HeroSectionImage} id="heroSectionImage"></img>
