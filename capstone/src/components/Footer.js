@@ -20,14 +20,18 @@ const Footer = () => {
             </div>
               <div className="contact">
                   <h2>Contact</h2>
-                  <li> <a href="">Address</a> </li>
-                  <li> <a href="">Phone number</a></li>
-                  <li> <a href="">Email</a></li>
+                  <li>  Address:
+                        123 Main Street
+                        Chicago, IL 60601
+                        United States
+                  </li>
+                  <li>+1 (312) 555-1234</li>
+                  <li>info@littlelemonchicago.com</li>
               </div>
               <div className="social-media-links">
-              <h2>Adress</h2>
-                  <li><a href="">Phone number</a></li>
-                  <li><a href="">Email</a></li>
+              <h2>Social Media Links</h2>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="">Twitter</a></li>
               </div>
         </div>
       </footer>

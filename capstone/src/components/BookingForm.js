@@ -46,8 +46,8 @@ const BookingForm = ({availableTimes, dispatch, onSubmit}) => {
         <form className='form' onSubmit={handleSubmit}>
           <fieldset className='fieldSet'>
             <div className='field'>
-                <label>Reservation Date: </label>
-                <input 
+                <label for="reservationDate">Reservation Date: </label>
+                <input id='reservationDate'
                     min={today}
                     type='date' 
                     value={date} 
@@ -55,8 +55,8 @@ const BookingForm = ({availableTimes, dispatch, onSubmit}) => {
                     required />
             </div>
             <div className='field'>
-                <label>Reservation Time: </label>
-                <select name="time" value={time} onChange={handleTimeChange} required>
+                <label for="reservationTime">Reservation Time: </label>
+                <select id='reservationTime' name="time" value={time} onChange={handleTimeChange} required>
                     {availableTimes.length > 0 ? (
                     availableTimes.map((availableTime, index) => (
                         <option key={index} value={availableTime}>
@@ -69,8 +69,8 @@ const BookingForm = ({availableTimes, dispatch, onSubmit}) => {
                 </select>
             </div>
             <div className='field'>
-                <label>Guests: </label>
-                <input 
+                <label for="guests">Guests: </label>
+                <input id='guests'
                     type='number' 
                     min='1' 
                     max='10' 
@@ -81,18 +81,19 @@ const BookingForm = ({availableTimes, dispatch, onSubmit}) => {
             </div>
 
             <div className='field'>
-                <label>Occasion: </label>
-                <select 
-                    id='occasion' 
+                <label for="occasion">Occasion: </label>
+                <select id='occasion'
                     name='occasion'
                     value={occasion}
+                    required
                     onChange={(e) => setOcccasion(e.target.value)}>
                     {occasions.map((occasion, index) => (
                       <option key={index}>{occasion}</option>
-                    ))}
+                    ))
+                    }
                 </select>
             </div>
-            <button disabled={!date || !guests} type='submit'>Submit</button>
+            <button disabled={!date || !guests || availableTimes.length === 0} type='submit' aria-label='Submit button'>Submit</button>
           </fieldset>
         </form>
       );

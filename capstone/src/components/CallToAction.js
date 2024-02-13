@@ -2,16 +2,22 @@ import React from 'react'
 import HeroSectionImage from "../assets/restauranfood.jpg";
 
 const CallToAction = () => {
+
+    const handleClick = () => {
+        window.location.href = "/booking";
+    }
+
+
     return(
         <div className="heroSection">
                 <div className="heroSectionContainer">
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <a href='/booking'><button>Reserve a table</button></a>
+                    <p>Little Lemon: A Culinary Oasis. Experience exquisite flavors and cozy ambiance in the heart of the city.</p>
+                    <button aria-label='Reserve a table' onClick={handleClick}>Reserve a table</button>
                 </div>
                 <div className="heroImage">
-                    <img src={HeroSectionImage} id="heroSectionImage"></img>
+                    <img src={HeroSectionImage} alt='Image of restaurant food' id="heroSectionImage"></img>
                 </div>
             </div>
     )
