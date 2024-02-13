@@ -9,8 +9,10 @@ import Person3 from "../assets/person3.png";
 import Person4 from "../assets/person4.png";
 import RestaurantChef from "../assets/restaurantchefB.jpg";
 import MarioAndAdrian from "../assets/marioandadrian.jpg";
+import { Routes, Route } from "react-router-dom";
+import Header from "./Header";
 
-const Nav = () => {
+const Main = () => {
   return (
     <main>
         <div className="heroSection">
@@ -107,4 +109,4 @@ const Nav = () => {
     </main>
   );
 };
-export default Nav;
+export default Main;

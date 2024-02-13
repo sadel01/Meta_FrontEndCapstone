@@ -4,19 +4,21 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import React from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
-    <>
+    <Router>
       <div className="headerNav">
         <Header/>
         <Nav/>
       </div>
-      <Main/>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
       <Footer/>
-    </>
+    </Router>
   );
 }
 
