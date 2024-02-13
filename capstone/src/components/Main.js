@@ -20,7 +20,9 @@ const Nav = () => {
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 <button>Reserve a table</button>
             </div>
-            <img src={HeroSectionImage} id="heroSectionImage"></img>
+            <div className="heroImage">
+                <img src={HeroSectionImage} id="heroSectionImage"></img>
+            </div>
         </div>
 
         <div className="Highlights">
@@ -36,7 +38,7 @@ const Nav = () => {
                         <p>$12.99</p>
                     </div>
                     <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-                    <p>Order a delivery</p>
+                    <p className="orderDelivery">Order a delivery</p>
                 </div>
                 <div className="highlight">
                     <img src={Brucchetta} className="dishImg"></img>
@@ -45,7 +47,7 @@ const Nav = () => {
                         <p>$5.99</p>
                     </div>
                     <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
-                    <p>Order a delivery</p>
+                    <p className="orderDelivery">Order a delivery</p>
                 </div>
                 <div className="highlight">
                     <img src={LemonDessert} className="dishImg"></img>
@@ -54,7 +56,7 @@ const Nav = () => {
                         <p>$5.00</p>
                     </div>
                     <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-                    <p>Order a delivery</p>
+                    <p className="orderDelivery">Order a delivery</p>
                 </div>
             </div>
         </div>

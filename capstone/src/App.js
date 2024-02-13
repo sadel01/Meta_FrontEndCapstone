@@ -10,7 +10,7 @@ import React from "react";
 function App() {
   return (
     <>
-      <div className="headerStyle">
+      <div className="headerNav">
         <Header/>
         <Nav/>
       </div>
