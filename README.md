@@ -11,6 +11,9 @@ First, clone this repository to your local machine:
 ```
 git clone https://github.com/sadel01/Meta_FrontEndCapstone
 ```
+```
+cd Meta_FrontEndCapstone
+```
 
 ### 📥 Install dependencies
 Run the following command to install all the necessary dependencies:
